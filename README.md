@@ -7,22 +7,34 @@ URL と絵文字名を入力して検索すると情報が出てきます。
 
 ### ダウンロード
 
-以下の Rleases ページでダウンロードできます。<br>
+以下の Releases ページでダウンロードできます。<br>
 https://github.com/9min-packup/emojiinfo/releases
 
 対応している OS は Windows, MacOS, Linux。32bit OS には対応していません。
 
 Electron を使用しているためアプリのファイルサイズは大きめですがご容赦ください。
 
+### パッケージのインストール
+
+```bash
+$  npm install
+```
+
+### 実行
+
+```bash
+$  npm run start
+```
+
 ### ビルド
 
 ```bash
-$ npm install
+# for Mac
+$ NODE_ENV=production npm run build --mac --x64
 
-# Mac
-$ NODE_ENV=production node_modules/.bin/electron-builder --mac --x64
-# Windows
-$ NODE_ENV=production node_modules/.bin/electron-builder --win --x64
-# Linux
-$ NODE_ENV=production node_modules/.bin/electron-builder --linux --x64
+# for Windows
+$ NODE_ENV=production npm run build --win --x64
+
+# for Linux
+$ NODE_ENV=production npm run build --linux --x64
 ```

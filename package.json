@@ -4,6 +4,8 @@
     "description": "Misskey サーバーの絵文字情報を取得するツール",
     "main": "src/main.js",
     "scripts": {
+        "start": "./node_modules/.bin/electron ./",
+        "build": "./node_modules/.bin/electron-builder",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -12,11 +14,9 @@
     "dependencies": {
         "axios": "^1.6.8"
     },
-    "devDependencies": {
-        "electron-builder": "^24.13.3"
-    },
     "build": {
         "appId": "space.rustearain.emojiinfo",
+        "productName": "EmojiInfo",
         "directories": {
             "output": "dist"
         },
@@ -40,5 +40,9 @@
             "oneClick": false,
             "allowToChangeInstallationDirectory": true
         }
+    },
+    "devDependencies": {
+        "electron": "^30.0.1",
+        "electron-builder": "^24.13.3"
     }
 }

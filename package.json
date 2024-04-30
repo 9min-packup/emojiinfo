@@ -1,0 +1,16 @@
+{
+    "name": "emojiinfo",
+    "version": "1.0.0",
+    "description": "Misskey サーバーの絵文字情報を取得するツールです...すごいやっつけ感。",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.6.8",
+        "electron": "^30.0.1"
+    }
+}

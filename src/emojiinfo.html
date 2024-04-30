@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Misskey サーバーの絵文字情報を取得するツール -->
+<html lang="ja">
+    <head>
+        <title>絵文字Info</title>
+        <meta charset="UTF-8" />
+        <script src="./emojiinfo.js"></script>
+        <link href="./emojiinfo.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="header">
+            <h2>絵文字Info</h2>
+        </div>
+        <div id="discription">
+            Misskeyサーバーの絵文字情報を取得するツールです。<br />
+            URLと絵文字名を入力して検索すると情報が出てきます。<br />
+        </div>
+
+        <div id="box">
+            <div id="form">
+                <label class="form-row">
+                    <div class="form_label">URL</div>
+                    <div class="form_input">
+                        <input
+                            class="text-input"
+                            type="text"
+                            id="host"
+                            value=""
+                        />
+                    </div>
+                </label>
+                <label class="form-row">
+                    <div class="form_label">絵文字名</div>
+                    <div class="form_input">
+                        <input
+                            class="text-input"
+                            type="text"
+                            id="emoji_name"
+                            value=""
+                        />
+                    </div>
+                </label>
+                <label class="form-row">
+                    <div class="form_label"></div>
+                    <div class="form_input">
+                        <input
+                            id="search"
+                            class="button"
+                            type="button"
+                            value="検索"
+                        />
+                    </div>
+                </label>
+            </div>
+            <div id="view">
+                <webview id="emoji_view" src="" disablewebsecurity></webview>
+            </div>
+            <div id="result">
+                <div id="info">Info</div>
+            </div>
+        </div>
+    </body>
+</html>

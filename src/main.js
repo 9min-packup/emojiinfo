@@ -7,7 +7,7 @@ let mainWindow = null;
 const CreateWindow = () => {
     mainWindow = new BrowserWindow({
         width: 800,
-        height: 600,
+        height: 800,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
@@ -15,7 +15,6 @@ const CreateWindow = () => {
             preload: __dirname + "/preload.js",
         },
     });
-    mainWindow.webContents.openDevTools();
     mainWindow.on("closed", function () {
         mainWindow = null;
     });
@@ -35,11 +34,9 @@ function request(host, name) {
 
     post(host + "/api/emoji", params)
         .then(function (response) {
-            console.log(response);
             send_res(response.data);
         })
         .catch(function (error) {
-            console.log(error);
             if (error.response) {
                 send_res_err(error.response.data);
             } else {

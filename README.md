@@ -30,11 +30,11 @@ $  npm run start
 
 ```bash
 # for Mac
-$ NODE_ENV=production npm run build --mac --x64
+$ npm run build-mac
 
 # for Windows
-$ NODE_ENV=production npm run build --win --x64
+$ npm run build-win
 
 # for Linux
-$ NODE_ENV=production npm run build --linux --x64
+$ npm run build-linux
 ```

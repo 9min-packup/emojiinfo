@@ -5,7 +5,9 @@
     "main": "src/main.js",
     "scripts": {
         "start": "./node_modules/.bin/electron ./",
-        "build": "./node_modules/.bin/electron-builder",
+        "build-win": "NODE_ENV=production ./node_modules/.bin/electron-builder  --win --x64",
+        "build-mac": "NODE_ENV=production ./node_modules/.bin/electron-builder  --mac --x64",
+        "build-linux": "NODE_ENV=production ./node_modules/.bin/electron-builder  --linux --x64",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],

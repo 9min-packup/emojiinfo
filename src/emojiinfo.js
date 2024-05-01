@@ -1,6 +1,6 @@
 function submit() {
-    let host = document.getElementById("host").value;
-    let emoji_name = document.getElementById("emoji_name").value;
+    const host = document.getElementById("host").value;
+    const emoji_name = document.getElementById("emoji_name").value;
 
     window.api.request(host, emoji_name);
 }
@@ -29,6 +29,16 @@ window.onload = () => {
         submit();
     });
 
+    const view = document.getElementById("emoji_view");
+    view.addEventListener("dom-ready", (event) => {
+        event.target.insertCSS(
+            "body {background-color: #00000000 !important;} img {background-color: #00000000 !important;}"
+        );
+    });
+    view.addEventListener("will-download", (event) => {
+        console.log(e);
+    });
+
     window.api.on_res((data) => {
         let info = document.getElementById("info");
         let text =
@@ -50,19 +60,20 @@ window.onload = () => {
 
         info.innerHTML = text;
 
-        let emoji_view = document.getElementById("emoji_view");
-        emoji_view.src = data.url;
+        const emoji_view = document.getElementById("emoji_view");
+        emoji_view.loadURL(data.url);
     });
 
     window.api.on_res_err((data) => {
-        let info = document.getElementById("info");
-        let text = "error <br>\n" + "<br>\n " + JSON.stringify(data) + "<br>\n";
+        const info = document.getElementById("info");
+        const text =
+            "error <br>\n" + "<br>\n " + JSON.stringify(data) + "<br>\n";
         info.innerHTML = text;
     });
 
     window.api.on_err(() => {
-        let info = document.getElementById("info");
-        let text = "error <br>\n";
+        const info = document.getElementById("info");
+        const text = "error <br>\n";
         info.innerHTML = text;
     });
 };

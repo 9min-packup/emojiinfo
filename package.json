@@ -1,6 +1,6 @@
 {
     "name": "emojiinfo",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Misskey サーバーの絵文字情報を取得するツール",
     "main": "src/main.js",
     "scripts": {

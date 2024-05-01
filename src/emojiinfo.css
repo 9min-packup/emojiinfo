@@ -17,8 +17,8 @@ h2 {
 }
 
 #discription {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .button {
@@ -74,13 +74,13 @@ h2 {
 }
 
 .form-row {
-    width: 400px;
+    width: 100%;
 }
 
 #view {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background-color: #000000;
+    background-color: #00000000;
     margin-top: 2px;
     margin-bottom: 2px;
 }

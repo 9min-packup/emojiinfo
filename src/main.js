@@ -1,13 +1,13 @@
 /* main.js, case 4(extend: send and recv) */
 "use strict";
-const { BrowserWindow, app, ipcMain } = require("electron");
+const { BrowserWindow, app, ipcMain, session } = require("electron");
 const { post } = require("axios");
 
 let mainWindow = null;
 const CreateWindow = () => {
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 800,
+        width: 1024,
+        height: 768,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
